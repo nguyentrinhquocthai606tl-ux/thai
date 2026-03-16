@@ -1,0 +1,240 @@
+/* General Styling for About Page */
+body {
+	background-color: #fdfdfa;
+}
+
+/* About Hero Section */
+.about-hero {
+	background: linear-gradient(rgba(42, 60, 38, 0.8), rgba(42, 60, 38, 0.8)),
+		url(../img/background.png) center / cover;
+	padding: 100px 0;
+	text-align: center;
+	color: #fff;
+}
+
+.about-hero .subtitle {
+	font-size: 1.2em;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	opacity: 0.9;
+}
+
+.about-hero h1 {
+	font-size: 3.5em;
+	font-weight: 700;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Founder Section */
+.founder-section {
+	padding: 80px 0;
+	background-color: #fff;
+}
+
+.founder-card {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+	margin-bottom: 60px;
+}
+
+.founder-card:last-child {
+	margin-bottom: 0;
+}
+
+.founder-card.reverse {
+	flex-direction: row-reverse;
+}
+
+.founder-image img {
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.founder-info h2 {
+	font-size: 2.5em;
+	color: var(--primary);
+}
+
+.founder-info .role {
+	font-size: 1.1em;
+	font-weight: 600;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+.founder-info .education {
+	font-size: 1em;
+	font-style: italic;
+	color: #777;
+	margin-bottom: 20px;
+}
+
+.founder-info .founder-quote {
+	font-size: 1em;
+	font-style: italic;
+	color: #333;
+	padding-left: 20px;
+	border-left: 3px solid var(--accent);
+	margin: 20px 0;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	word-break: break-word;
+	line-height: 1.7;
+}
+
+.founder-info .founder-quote p {
+	margin: 0;
+}
+
+.founder-info .bio {
+	line-height: 1.7;
+	margin-bottom: 20px;
+}
+
+.founder-info .social-links a {
+	color: var(--dark);
+	font-size: 1.5em;
+	margin-right: 15px;
+	transition: color 0.3s;
+}
+
+.founder-info .social-links a:hover {
+	color: var(--primary);
+}
+
+.gratitude-section {
+	padding: 0 0 80px 0;
+	background-color: #fff;
+}
+
+blockquote {
+	text-align: center;
+	font-size: 1.5em;
+	font-style: italic;
+	color: #555;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	word-break: break-word;
+	line-height: 1.7;
+	border-left: 4px solid var(--primary);
+	padding-left: 20px;
+}
+
+/* Achievements Section */
+.achievements-section {
+	padding: 80px 0;
+}
+
+.achievements-list .achievement-item {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+	align-items: center;
+	background-color: #fff;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+}
+
+.achievements-list .achievement-item:not(:last-child) {
+	margin-bottom: 50px;
+}
+
+.achievements-list .achievement-item.reverse {
+	direction: rtl;
+}
+
+.achievements-list .achievement-item.reverse > * {
+	direction: ltr;
+}
+
+.achievement-image img {
+	width: 100%;
+	border-radius: 8px;
+	object-fit: cover;
+}
+
+.achievement-content .excerpt {
+	font-style: italic;
+	color: #555;
+	padding-left: 20px;
+	border-left: 3px solid var(--accent);
+	margin-bottom: 20px;
+}
+
+.achievement-content h3 {
+	font-size: 1.8em;
+	color: var(--dark);
+	margin-bottom: 15px;
+}
+
+.achievement-content p {
+	line-height: 1.7;
+	margin-bottom: 25px;
+}
+
+.achievement-content .read-more {
+	color: var(--primary);
+	text-decoration: none;
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	transition: gap 0.3s;
+}
+
+.achievement-content .read-more:hover {
+	gap: 12px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+	.achievements-list .achievement-item {
+		grid-template-columns: 1fr;
+		gap: 30px;
+		padding: 30px;
+	}
+	.achievements-list .achievement-item.reverse {
+		direction: ltr;
+	}
+}
+
+@media (max-width: 768px) {
+	.founder-card {
+		flex-direction: column;
+		text-align: center;
+	}
+	.founder-card.reverse {
+		flex-direction: column;
+	}
+	.about-text {
+		max-width: 95vw;
+		font-size: 1em;
+	}
+	blockquote,
+	.founder-info .founder-quote {
+		max-width: 95vw;
+		font-size: 1em;
+	}
+}
+
+.about-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.about-text {
+	max-width: 700px;
+	margin: 0 auto 2rem auto;
+	text-align: center;
+	line-height: 1.7;
+	word-break: break-word;
+}
